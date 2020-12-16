@@ -30,7 +30,6 @@ export default function BlogId({ blog }:props) {
     const data = await fetch('https://bylkg.microcms.io/api/v1/articles', key)
       .then(res => res.json())
       .catch(() => null);
-      console.log('data >> ',data)
     const paths = data.contents.map((content:BlogData) => `/articles/${content.id}`);
     return {paths, fallback: false};
   };
