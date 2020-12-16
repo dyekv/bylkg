@@ -24,7 +24,6 @@ export default function Home({ blog }:props) {
 
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
-  console.log("koko")
   const key = {
     headers: {'X-API-KEY': process.env.MICROCMS_API_KEY || ''},
   };

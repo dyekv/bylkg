@@ -1,6 +1,7 @@
 import {BlogData} from '../../utils/types'
 import {format} from 'date-fns'
 import {GetStaticProps} from 'next'
+import styles from '../../styles/Articles.module.scss'
 
 type props = {
     blog:BlogData
@@ -8,10 +9,11 @@ type props = {
 
 export default function BlogId({ blog }:props) {
     return (
-      <main>
-        <h1>{blog.title}</h1>
-        <p>{format(new Date(blog.publishedAt),'yyyy-MM-dd')}</p>
+      <main className={styles.main}>
+        <h1 className={styles.title}>{blog.title}</h1>
+        <p className={styles.publishedAt}>{format(new Date(blog.publishedAt),'yyyy-MM-dd')}</p>
         <div
+        className={styles.post}
           dangerouslySetInnerHTML={{
             __html: `${blog.body}`,
           }}
