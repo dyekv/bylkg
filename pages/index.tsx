@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import {BlogData} from '../utils/types'
+import { BlogData } from '../utils/types'
 
 interface props {
-  blog:BlogData[]
+  blog: BlogData[]
 }
 
-export default function Home({ blog }:props) {
+export default function Home({ blog }: props) {
   return (
-      <div>
+    <div>
       {blog.map(blog => (
         <ul key={blog.id}>
           <li >
@@ -25,14 +25,14 @@ export default function Home({ blog }:props) {
 // データをテンプレートに受け渡す部分の処理を記述します
 export const getStaticProps = async () => {
   const key = {
-    headers: {'X-API-KEY': process.env.MICROCMS_API_KEY || ''},
+    headers: { 'X-API-KEY': process.env.MICROCMS_API_KEY || '' },
   };
   const data = await fetch('https://bylkg.microcms.io/api/v1/articles', key)
     .then(res => res.json())
     .catch(() => null);
   return {
     props: {
-      blog:data.contents
+      blog: data.contents
     },
   };
 };
