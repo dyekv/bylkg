@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/Articles.module.scss'
+import Header from './Header'
 
 type Props = {
     title?: string
@@ -15,7 +16,9 @@ const Layout: React.FC<Props> = (props) => {
                 <title>{title ? title + ' | ' + blogtitle : blogtitle}</title>
                 <link rel="icon" href="favicon.ico" />
             </Head>
-            <header>{/* ヘッダーコンポーネント */}</header>
+            <header>
+                <Header />
+            </header>
             <main className={styles.main}>{children}</main>
             <footer>{/* フッターコンポーネント */}</footer>
         </div>
