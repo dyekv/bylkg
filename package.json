@@ -33,7 +33,8 @@
   },
   "_moduleAliases": {
     "@mytype": "utils/types.ts",
-    "@utils": "util"
+    "@utils": "utils",
+    "@components": "comopnents"
   },
   "license": "MIT"
 }
