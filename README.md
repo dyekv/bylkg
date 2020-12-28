@@ -2,3 +2,4 @@
 - Next.js
 - TypeScript
 - MicroCMS
+- Vercel
