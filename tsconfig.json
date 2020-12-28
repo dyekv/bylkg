@@ -20,7 +20,8 @@
     "baseUrl": "./",
     "paths": {
       "@mytype": ["utils/types.ts"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@components/*":["components/*"]
     }
   },
   "exclude": ["node_modules"],

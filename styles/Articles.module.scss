@@ -37,4 +37,21 @@
     list-style-type: decimal;
     list-style-position: inside;
   }
+
+  & > p > code {
+    background-color:#f6e1e5;
+    border-radius: 2px;
+    padding:0px 5px
+  }
+
+  & > pre {
+    margin:10px 0
+  }
+
+  & > pre > code {
+    border-radius:3px;
+    background-color:#777;
+    color:#eee;
+    padding:10px 20px;
+  }
 }
