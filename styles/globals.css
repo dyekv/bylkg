@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
+.page{
+    min-height:100vh;
+    position:relative;
+    padding-bottom: 64px;
+}
+
+footer{
+    position:absolute;
+    bottom: 0;
+    background-color:#A3B5FD;
+    width:100%
+}
