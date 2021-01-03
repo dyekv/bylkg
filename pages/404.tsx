@@ -1,7 +1,11 @@
-export default function Custom404() {
+import Layout from '@components/Layout'
+
+const Custom404 = () => {
     return (
-      <main className="main">
-        <p>ページがありません。</p>
-      </main>
-    );
-  }
+        <Layout>
+            <p>ページがありません。</p>
+        </Layout>
+    )
+}
+
+export default Custom404
