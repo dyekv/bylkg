@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { BlogData } from '@mytype'
 import Layout from '@components/Layout'
+import ArticleCard from '@components/ArticleCard'
 
 interface props {
     blog: BlogData[]
@@ -10,13 +10,7 @@ const Home = ({ blog }: props) => {
     return (
         <Layout>
             {blog.map((blog) => (
-                <ul key={blog.id}>
-                    <li>
-                        <Link href={`articles/${blog.id}`}>
-                            <a>{blog.title}</a>
-                        </Link>
-                    </li>
-                </ul>
+                <ArticleCard blog={blog} key={blog.id}/>
             ))}
         </Layout>
     )
