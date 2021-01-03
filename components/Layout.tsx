@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import styles from '../styles/Articles.module.scss'
 import Header from './Header'
+import Footer from './Footer'
 
 type Props = {
     title?: string
@@ -20,7 +21,7 @@ const Layout: React.FC<Props> = (props) => {
                 <Header />
             </header>
             <main className={styles.main}>{children}</main>
-            <footer>{/* フッターコンポーネント */}</footer>
+            <footer><Footer/></footer>
         </div>
     )
 }
