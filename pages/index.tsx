@@ -1,12 +1,16 @@
 import { BlogData } from '@mytype'
 import Layout from '@components/Layout'
 import ArticleCard from '@components/ArticleCard'
+import { useEffect } from 'react'
 
 interface props {
     blog: BlogData[]
 }
 
 const Home = ({ blog }: props) => {
+    useEffect(()=>{
+        console.log(blog)
+    },[])
     return (
         <Layout>
             {blog.map((blog) => (

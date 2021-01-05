@@ -6,6 +6,11 @@
     min-height:100vh;
     position:relative;
     padding-bottom: 64px;
+    background-color: #ebf1f5;
+}
+
+header{
+    background-color: #c2dfff;
 }
 
 footer{
