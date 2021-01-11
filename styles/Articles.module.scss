@@ -4,14 +4,21 @@
 }
 
 .title {
-  margin-bottom: 20px;
+  font-size: 36px;
+  margin: 20px;
+  text-align: center;
 }
 
 .publishedAt {
+  text-align: right;
   margin-bottom: 40px;
 }
 
 .post {
+
+  margin-bottom: 50px;
+
+
   & > h1 {
     font-size: 30px;
     font-weight: bold;
@@ -22,10 +29,24 @@
   }
 
   & > h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 40px 0 20px;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  & > h3 {
     font-size: 24px;
     font-weight: bold;
     margin: 40px 0 16px;
     border-bottom: 1px solid #ddd;
+  }
+
+  & > h4{
+    font-weight: bold;
+    font-size:20px;
   }
 
   & > p {
@@ -33,9 +54,18 @@
     letter-spacing: 0.2px;
   }
 
+  & > * > a {
+    text-decoration: underline;
+    color:#777
+  }
+
   & > ol {
     list-style-type: decimal;
     list-style-position: inside;
+  }
+
+  & > ul {
+    padding-left: 40px;
   }
 
   & > p > code {
@@ -45,13 +75,16 @@
   }
 
   & > pre {
-    margin:10px 0
+    margin:10px 0;
+    background-color: #777;
+    overflow-x: auto;
+    white-space: pre;
   }
 
   & > pre > code {
     border-radius:3px;
     background-color:#777;
     color:#eee;
-    padding:10px 20px;
+    line-height: 1.5em;
   }
 }
